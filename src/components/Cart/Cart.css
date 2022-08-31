@@ -1,0 +1,374 @@
+
+.cartpage {
+    width: 100%;
+    min-height: 40px;
+}
+.cartFirst {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+}
+
+.firsttwo {
+    display: flex;
+    flex: .4;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left:50px;
+}
+
+.cartmiddle {
+    flex: .3;
+    display: flex;
+    align-items: center;
+}
+
+.devide {
+    border-top: 1px dashed rgb(0, 0, 0);
+    width: 10%;
+}
+
+.cartlast {
+    flex: .4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+.checkout-steps {
+    justify-content: space-around;
+}
+
+.cartsecond {
+    width: 100%;
+    min-height: 600px;
+    /* background-color: red; */
+    display: flex;
+}
+
+.secondfirst {
+    flex: .65;
+    border-top: 1px solid rgb(242, 242, 242);;
+    border-right: 1px solid rgb(242, 242, 242);;
+    /* background-color: limegreen; */
+}
+
+.secondsecond {
+    flex: .45;
+    border-top: 1px solid rgb(242, 242, 242);;
+    /* background-color: blue; */
+}
+
+.cartfirst1 {
+    width: 80%;
+    height: 90px;
+    border: 1px solid rgb(242, 242, 242);
+    margin: 50px auto 12px auto;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.cartfirst2 {
+    width: 80%;
+    height: 140px;
+    border: 1px solid rgb(242, 242, 242);
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    border-radius: 5px;
+}
+
+.cartfirst3 {
+    width: 80%;
+    margin: 12px auto;
+    min-height: 460px;
+    /* background-color: white; */
+}
+
+.cartdatacl {
+    display: flex;
+    width: 100%;
+    height: 180px;
+    padding: 12px;
+    border: 1px solid rgb(242, 242, 242);
+    margin: 10px 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.dataimg {
+    padding-right: 15px;
+}
+
+.dataimg img {
+    width: 100%;
+    height: 100%;
+}
+
+.quanPage {
+    display: block;
+    position: fixed;
+    width: 420px;
+    min-height: 300px;
+    margin: auto;
+    background-color: rgba(255, 62, 107, 0.721);
+    filter: blur(.2px);
+    top: 27%;
+    left: 32%;
+    border-radius: 5px;
+}
+
+.quanPagess {
+    display: block;
+    position: fixed;
+    width: 420px;
+    min-height: 300px;
+    margin: auto;
+    background-color: rgba(255, 62, 107, 0.721);
+    filter: blur(.2px);
+    top: 12%;
+    left: 32%;
+    border-radius: 5px;
+}
+
+.firstvan {
+    width: 100%;
+    height: 20%;
+    color: #fff;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+.diffquantiy {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+
+
+.buttongrid {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px auto 0 auto;
+    border: 2px solid red;
+}
+
+.donemain {
+    width: 350px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.done {
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255,62,108);
+}
+
+.done:hover {
+    color: rgb(255,62,108);
+    background-color: #fff;
+}
+
+.quanpagedis {
+    display: none;
+}
+
+.cross {
+    font-size: 27px;
+    position: absolute;
+    right: 20px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cartfirst2 {
+    background-image: url("https://i1.wp.com/www.coupondalo.com/wp-content/uploads/2018/09/myntra-500-off-first-order-coupon.png?fit=600%2C320&ssl=1");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cartfirst1 {
+    background-image: url("https://www.icicibank.com/managed-assets/images/offer-zone/credit-debit-card/myntra-offer.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.remove {
+    border: none;
+    padding: 3px 10px;
+    margin-right: 10px;
+    background-color: rgb(255,62,108);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.coupan {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 140px 0 50px;
+    align-items: center;
+}
+
+.payfirst {
+    margin: 40px 15px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+.appbutt {
+    padding: 4px 16px;
+    background-color: #fff;
+    border: 1px solid red;
+    color: red;
+    font-weight: bold;
+}
+
+.paysecond {
+    margin: 15px;
+    border-bottom: 1px solid rgb(242, 242, 242)
+}
+
+.boxcarcoup {
+    display: flex;
+    margin: 20px;
+    width: 80%;
+    height: 120px;
+    border-radius: 5px;
+    padding: 0 10px;
+    background-color: rgb(255,241,236);
+}
+
+.nextcoupon {
+    padding-left: 20px;
+}
+
+.imgcoupon img {
+    height: 100%;
+}
+
+.nextcoupon h4 {
+    padding: 12px 0 3px 0;
+}
+
+
+.addgift {
+    padding: 10px 0 0 0;
+    font-size: 14px;
+    color: rgb(255,62,108);
+    font-weight: bold;
+
+}
+
+.paythird {
+    margin: 15px;
+    border-bottom: 1px solid rgb(242, 242, 242)
+}
+
+#totalamo {
+    margin: 15px;
+    margin-right: 95px;
+    font-weight: bold;
+}
+
+.pricedetails {
+    padding-bottom: 9px;
+}
+
+.totalmrp {
+    display: flex;
+    padding: 6px;
+    justify-content: space-between;
+    margin-right: 80px;
+}
+
+.placebutton {
+    display: inline-block;
+    border: none;
+    /* padding: 3px 10px; */
+    /* margin-left: 10px; */
+    width: 68%;
+    padding: 12px 0;
+    margin: 0 45px;
+    background-color: rgb(255,62,108);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.lastgreen {
+    color: rgb(20,205,168);
+}
+
+.step1 {
+    color: rgb(20,205,168);
+}
+
+.productfirst1 {
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 90px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.addaddress {
+    display: inline-block;
+    height: 35px;
+    padding: 0 12px;
+    background-color: #ffff;
+    border: 1px solid rgb(65, 65, 65);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.paywithcard {
+    width: 157px;
+    margin: 10px auto;
+}
+
+
+/* input {
+    width: 80%;
+    height: 30px;
+    margin: 5px 30px;
+}
+
+label {
+    color: #fff;
+    padding: 2px;
+} */
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:150px) and (max-width:720px) { 
+
+    .cartsecond {
+        display: block;
+    }
+
+}

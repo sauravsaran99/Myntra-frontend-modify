@@ -1,0 +1,50 @@
+
+.product {
+    min-height: 600px;
+    width: 100%;
+}
+
+.productfirst {
+    width: 100%;
+    height: 150px;
+    /* background-color: red; */
+    border-bottom: .5px solid rgb(169, 162, 162);
+}
+
+.productsecond {
+    width: 100%;
+    min-height: 400px;
+    /* background-color: rebeccapurple; */
+}
+
+.bottomFilter {
+    display: flex;
+    height: 60%;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 18px;
+}
+
+.firstclothing {
+    height: 20%;
+    padding: 18px;
+    /* background-color: yellow; */
+}
+
+.secondclothing {
+    height: 20%;
+    padding: 18px;
+    /* background-color: red; */
+}
+
+.bundlescounty {
+    display: flex;
+}
+
+.boldspan {
+    font-weight: bold;
+}
+
+.litlepadd {
+    padding-right: 12px;
+}

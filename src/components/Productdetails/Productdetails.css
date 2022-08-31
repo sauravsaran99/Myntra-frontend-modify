@@ -1,0 +1,247 @@
+
+.productsDetails {
+    width: 100%;
+    min-height: 550px;
+    display: flex;
+    padding: 60px 30px;
+}
+
+.detailsfirst {
+    flex: .9;
+    margin: auto;
+}
+
+.detailsseconds {
+    flex: 1.1;
+    /* background-color: aquamarine; */
+}
+
+.rating {
+    border: .3px solid rgb(203, 203, 203);
+    display: inline-block;
+    padding: 3px 5px;
+}
+
+.firsthalf {
+    padding-bottom: 9px;
+    border-bottom: .3px solid rgb(148, 148, 148);
+}
+
+.green {
+    color: #03a685;
+    font-weight: 700;
+}
+
+.grr2 {
+    padding: 12px 0;
+}
+
+.detailsseconds h3 {
+    padding: 10px 0;
+    font-size: 25px;
+    color: rgb(173, 173, 173);
+    font-weight: 300;
+}
+
+s {
+    font-weight: 200;
+    color: rgb(164, 164, 165);
+}
+
+.orange {
+    color: orange;
+    margin-left: 7px;
+}
+
+.secondhalf {
+    padding: 10px 0;
+}
+
+.firstimgss {
+    width: 60%;
+    height: 60%;
+    margin: auto;
+}
+
+.firstimgss img {
+    width: 100%;
+    height: 100%;
+}
+
+/* [1] The container */
+.img-hover-zoom {
+    height: 450px; /* [1.1] Set it as per your need */
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  }
+  
+  /* [2] Transition property for smooth transformation of images */
+  .img-hover-zoom img {
+    transition: transform .5s ease;
+  }
+  
+  /* [3] Finally, transforming the image when container gets hovered */
+  .img-hover-zoom:hover img {
+    transform: scale(1.1);
+  }
+
+  .size {
+      display: flex;
+  }
+
+  .redborder {
+      border: 2px solid red;
+      width: 40px;
+      height: 40px;
+      background-color: #ffff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 5px;
+  }
+
+  .sizechild:active {
+      background-color: rgb(247, 125, 200);
+  }
+
+
+  .sizechild {
+      width: 40px;
+      height: 40px;
+      background-color: #ffff;
+      border: 1px solid rgb(108, 106, 106);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 5px;
+  }
+
+  .buttonproduct {
+      width: 100%;
+      height: 60px;
+      padding: 20px 0;
+      /* background-color: red; */
+      display: flex;
+  }
+
+  .cart {
+      width: 220px;
+      padding: 30px;
+      border-radius: 7px;
+      background-color: rgb(255,62,108);
+      margin-right: 9px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #ffff;
+      font-size: 21px;
+      cursor: pointer;
+  }
+
+  .whislist {
+      cursor: pointer;
+      width: 160px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      /* color: rgb(255,62,108); */
+      color: black;
+      font-size: 21px;
+      border: .3px solid rgb(190, 190, 190);
+  }
+
+   @media screen and (min-width: 150px) and (max-width: 770px) {
+    .productsDetails {
+        display: block;
+    }
+
+    .img-hover-zoom {
+        height: 350px;
+  }
+
+  .firstimgss { 
+      width: 50%;
+      margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width:401px) and (max-width:720px) {
+    .productsecondsecond {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .quanPage {
+        transform: translate(-50%,-50%);
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        }
+    
+        .quanPage {
+            width: 290px;
+        }
+    
+        .donemain {
+            width: 221px;
+        }
+    
+        .diffquantiy {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    .firstimgss {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width:150px) and (max-width:400px) {
+    .cart {
+        font-size: 16px;
+    }
+
+    .productsecondsecond {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .bundlescounty {
+        display: none;
+    }
+
+    .cartmiddle {
+        display: none;
+    }
+
+    .quanPage {
+    transform: translate(-50%,-50%);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    }
+
+    .mobileres {
+        width: 100%;
+    }
+
+    .donemain {
+        width: 221px;
+    }
+
+    .diffquantiy {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .img-hover-zoom {
+        height: 200px;
+  }
+
+  .firstimgss { 
+      width: 50%;
+      margin-bottom: 30px;
+  }
+} 
