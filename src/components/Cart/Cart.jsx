@@ -43,7 +43,7 @@ export const Cart  = () => {
     
 
     const patchFun = () => {
-        axios.patch(`https://myntraclone2222.herokuapp.com/cart/${idup}`, updateQuan).then((res) => {
+        axios.patch(`https://myntra-backend-2.onrender.com/cart/${idup}`, updateQuan).then((res) => {
         })
 
         dispatch(Cartthunk(id));
@@ -65,7 +65,7 @@ export const Cart  = () => {
     }
 
     const deleteFun = (id) => {
-        axios.delete(`https://myntraclone2222.herokuapp.com/cart/${id}`).then((res) => {
+        axios.delete(`https://myntra-backend-2.onrender.com/cart/${id}`).then((res) => {
             dispatch(Cartthunk(id));
             getId(id)
         // onQuanpage('quanpagedis');

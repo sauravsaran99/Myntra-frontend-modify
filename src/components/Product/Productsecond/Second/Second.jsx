@@ -14,6 +14,7 @@ export const Second = () => {
   //   dispatch(Productthunk());
   // }, [dispatch]);
 // console.log('sau', data)
+console.log('liveProduct', products)
   useEffect(() => {
     getProducts([...data]);
   }, [data]);

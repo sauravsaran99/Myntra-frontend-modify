@@ -4,6 +4,7 @@ import  '../Signup/Signup.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
+import Spinner from '../Spinner/Spinner';
 
 export const Signin = () => {
 
@@ -20,6 +21,7 @@ export const Signin = () => {
         email: '',
         password: '',
     })
+    const[spin, setSpin] = useState(false);
 
     const handleChange = (e) => {
     let name = e.target.name;
@@ -29,23 +31,33 @@ export const Signin = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('https://myntraclone2222.herokuapp.com/login', userData).then((res) => {
+        setSpin(true)
+        axios.post('https://myntra-backend-2.onrender.com/login', userData).then((res) => {
+            console.log('reslive', res)
         if(res.data.mess) {
+            setSpin(false)
             return setErrors(res.data.mess)
         } else if(res.data.messa) {
+            setSpin(false)
             return setErrors(res.data.messa)
-        } else {
-            console.log(res.data)
+        }  else if(res.data.id) {
+            setSpin(false)
             sessionStorage.setItem('userId', res.data.id)
             navigate('/')
+        } else {
+            console.log('undefinedlive')
+            setSpin(false)
+            return setErrors("Either email or password is inccorect*")
         }
         }).catch((err) => {
+            setSpin(false)
             console.log('error', err.message)
         })
     }
     return (
         <>
         <Navbar></Navbar>
+        {spin && <Spinner />}
         <div className='mainparent'>
         <div className="parent">
             <div className="offerimage"></div>

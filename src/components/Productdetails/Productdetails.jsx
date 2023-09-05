@@ -8,6 +8,7 @@ import { Navbar } from "../Navbar/Navbar";
 import { Cartthunk } from "../Redux/Action/Cart";
 // import "../Navbar/Navbar.css"
 import { useSelector } from "react-redux";
+import Spinner from "../Spinner/Spinner";
 
 export const Productdetails = () => {
     const dispatch = useDispatch();
@@ -28,12 +29,14 @@ console.log("decart", cart)
   const [addClass, setClass] = useState("sizechild");
   const [data, getData] = useState({});
   const [ dataCart, setData ] = useState(cart)
+  const [spin, setSpin] = useState(true)
 
   useEffect(() => {
     axios
-      .get(`https://myntraclone2222.herokuapp.com/products/${id}`)
+      .get(`https://myntra-backend-2.onrender.com/products/${id}`)
       .then((res) => {
         // console.log(res.data);
+        setSpin(false);
         dispatch(Cartthunk(idLo))
         getData(res.data);
       })
@@ -45,14 +48,15 @@ console.log("decart", cart)
   }, [cart]);
 
   const addCart = () => {
-
+    setSpin(true);
     if(!idLo) {
       return navigate('/signin')
     } else {
       if (selectSize.size !== "") {
         axios
-          .post(`https://myntraclone2222.herokuapp.com/cart`, { ...data, ...selectSize})
+          .post(`https://myntra-backend-2.onrender.com/cart`, { ...data, ...selectSize})
           .then((res) => {
+            setSpin(false)
             // console.log('res', res.data);
             dispatch(Cartthunk(idLo))
           });
@@ -75,6 +79,7 @@ console.log("decart", cart)
   return (
     <>
     <Navbar cartcount={dataCart.length}></Navbar>
+    {spin && <Spinner />}
       <div>
         <div className="productsDetails">
           <div className="detailsfirst">

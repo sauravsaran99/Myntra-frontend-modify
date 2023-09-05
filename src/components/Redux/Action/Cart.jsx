@@ -9,7 +9,7 @@ export const cartData = (payload) => {
 
 export const Cartthunk = (id) => {
     return (dispatch) => {
-        axios.get(`https://myntraclone2222.herokuapp.com/cart`).then((res) => {
+        axios.get(`https://myntra-backend-2.onrender.com/cart`).then((res) => {
             console.log(res.data, 'res')
             console.log('id2',id)
             res.data = res.data.filter((e) => e.userid === id)

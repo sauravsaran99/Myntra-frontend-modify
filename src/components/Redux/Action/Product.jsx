@@ -8,7 +8,8 @@ export const Product = (payload) => {
 
 export const Productthunk = () => {
   return (dispatch) => {
-    axios.get("https://myntraclone2222.herokuapp.com/products").then((res) => {
+    axios.get("https://myntra-backend-2.onrender.com/products").then((res) => {
+      console.log('live', res.data)
       return dispatch(Product(res.data));
     });
   };

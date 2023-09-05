@@ -15,24 +15,24 @@ export const Productsecond = () => {
     console.log(typeof(radio))
     if(radio[0] == 'P'|| radio[0] == 'R' || radio[0] == 'W' || radio[0] == 'N' || radio[0] == 'H' || radio[0] == 'D' || radio[0] == 'L' || radio[0] == 'A' || radio[0] == 'E' || radio[0] == 'S' || radio[0] == 'K' || radio[0] == 'I' || radio[0] == 'K' || radio[0] == 'V' || radio[0] == 'F') {
       console.log('bradn')
-      axios.get(`https://fathomless-lowlands-62517.herokuapp.com/product?category=${gender=='men'?'mentshirts':'womenkurti'}&brand=${radio}`).then((res) => {
+      axios.get(`https://myntra-backend-2.onrender.com//product?category=${gender=='men'?'mentshirts':'womenkurti'}&brand=${radio}`).then((res) => {
       dispatch(Product(res.data))
     })
     } else {
       if(radio == 174) {
-        axios.get(`https://fathomless-lowlands-62517.herokuapp.com/product?min=${radio}&max=1631`).then((res) => {
+        axios.get(`https://myntra-backend-2.onrender.com/product?min=${radio}&max=1631`).then((res) => {
           dispatch(Product(res.data))
         })
       } else if(radio == 1631) {
-        axios.get(`https://fathomless-lowlands-62517.herokuapp.com/product?min=${radio}&max=3088`).then((res) => {
+        axios.get(`https://myntra-backend-2.onrender.com/product?min=${radio}&max=3088`).then((res) => {
           dispatch(Product(res.data))
         })
       } else if(radio == 3088) {
-        axios.get(`https://fathomless-lowlands-62517.herokuapp.com/product?min=${radio}&max=4545`).then((res) => {
+        axios.get(`https://myntra-backend-2.onrender.com/product?min=${radio}&max=4545`).then((res) => {
           dispatch(Product(res.data))
         })
       }  else if(radio == 4545) {
-        axios.get(`https://fathomless-lowlands-62517.herokuapp.com/product?min=${radio}&max=6002`).then((res) => {
+        axios.get(`https://myntra-backend-2.onrender.com/product?min=${radio}&max=6002`).then((res) => {
           dispatch(Product(res.data))
         })
       }

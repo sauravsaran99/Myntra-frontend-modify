@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import { useEffect } from 'react';
+import Spinner from '../Spinner/Spinner';
 export const Signup = () => {
 
     const navigate = useNavigate();
@@ -13,7 +14,8 @@ export const Signup = () => {
         email: '',
         password: '',
     })
-    const [errors, setErrors] = useState('')
+    const [errors, setErrors] = useState('');
+    const[spin, setSpin] = useState(false);
 
     const userid = sessionStorage.getItem('userId');
 
@@ -31,20 +33,25 @@ export const Signup = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('https://myntraclone2222.herokuapp.com/register', userData).then((res) => {
+        setSpin(true)
+        axios.post('https://myntra-backend-2.onrender.com/register', userData).then((res) => {
         if(res.data.errors) {
             console.log(res.data.errors[0].msg)
+            setSpin(false)
             return setErrors(res.data.errors[0].msg)
         } else {
+            setSpin(false)
             navigate('/signin')
         }
         }).catch((err) => {
+            setSpin(false)
             console.log('error', err.message)
         })
     }
     return (
         <>
         <Navbar></Navbar>
+        {spin && <Spinner />}
         <div className='mainparent'>
         <div className="parent">
             <div className="offerimage"></div>

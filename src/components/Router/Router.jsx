@@ -3,7 +3,7 @@ import { Cart } from "../Cart/Cart";
 import { Home } from "../Home/Home";
 import { Productjsx } from "../Product/Product";
 import { Signup } from "../../components/Signup/Signup";
-import { Signin } from "../../components/Signin/Signin";
+import { Signin } from "../Signin/Signin";
 import { Productdetails } from "../Productdetails/Productdetails";
 import { Address } from "../Address/Address";
 import { Thankyou } from "../Thankyou/Thankyou";
